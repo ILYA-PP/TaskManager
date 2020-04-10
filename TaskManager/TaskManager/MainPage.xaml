@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TaskManager.MainPage">
+
+    <Grid x:Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Column="0" Grid.Row="1">
+            <StackLayout x:Name="mainSV" />
+        </ScrollView>
+        <Grid x:Name="headerGrid" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Image x:Name="settingsI" Grid.Column="0" Grid.Row="0" Source="settingsImg.png"/>
+            <Label Grid.Column="1" Grid.Row="0" Text="Задачи" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Image x:Name="addI" Grid.Column="2" Grid.Row="0" Source="addTaskImg.png" />
+        </Grid>
+        <Button x:Name="sendReportB" Clicked="sendReportB_Clicked" Grid.Column="0" Grid.Row="2" Text="Отправить отчёт"/>
+        <Button x:Name="saveB" Clicked="saveB_Clicked" Grid.Column="1" Grid.Row="2" Text="Сохранить"/>
+    </Grid>
+</ContentPage>
